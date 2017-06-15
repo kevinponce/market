@@ -1,0 +1,73 @@
+AllCops:
+  Exclude:
+    - 'kp_jwt.gemspec'
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'db/*'
+    - 'test/*'
+    - 'bin/*'
+    - 'app/assets/*'
+    - 'config/*'
+    - 'Guardfile'
+    - 'Gemfile'
+    - 'Gemfile.lock'
+    - 'config.ru'
+    - 'Rakefile'
+    - '.*'
+    - 'log/*'
+    - 'lib/**/*'
+    - 'spec/dummy/db/schema.rb'
+  TargetRubyVersion: 2.3.0
+
+Rails:
+  Enabled: true
+
+Style/Encoding:
+  Enabled: true
+  EnforcedStyle: always
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: when_needed
+
+Style/Encoding:
+  EnforcedStyle: when_needed
+
+Metrics/LineLength:
+  Max: 250
+
+Metrics/MethodLength:
+  Max: 100
+
+Style/AlignHash:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Max: 20
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/CyclomaticComplexity:
+  Max: 20
+
+Metrics/ClassLength:
+  Max: 150
+
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+Style/EachWithObject:
+  Description: 'Prefer `each_with_object` over `inject` or `reduce`.'
+  Enabled: false
+
+Metrics/ParameterLists:
+  Description: 'Avoid parameter lists longer than three or four parameters.'
+  StyleGuide: '#too-many-params'
+  Enabled: true
+  Exclude:
+    - 'discount.rb'
